@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-manrope:
+      "SF Pro Text", "SF Pro Display", "Manrope", "Avenir Next", "Segoe UI", "Helvetica Neue", sans-serif;
+    --font-space-grotesk:
+      "SF Pro Display", "Space Grotesk", "Avenir Next", "Segoe UI", "Helvetica Neue", sans-serif;
+
+    --background: 0 0% 100%;
+    --foreground: 223 15% 31%;
+    --card: 0 0% 100%;
+    --card-foreground: 223 15% 31%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 223 15% 31%;
+
+    --primary: 223 15% 35%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 223 14% 79%;
+    --secondary-foreground: 223 15% 32%;
+    --muted: 223 14% 94%;
+    --muted-foreground: 223 10% 46%;
+    --accent: 223 14% 86%;
+    --accent-foreground: 223 15% 34%;
+
+    --destructive: 0 77% 58%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 153 66% 41%;
+    --warning: 39 96% 52%;
+
+    --border: 223 14% 74%;
+    --input: 223 14% 74%;
+    --ring: 223 20% 58%;
+    --radius: 1.15rem;
+  }
+
+  .dark {
+    --background: 222 22% 9%;
+    --foreground: 214 24% 95%;
+    --card: 222 20% 12%;
+    --card-foreground: 214 24% 95%;
+    --popover: 222 20% 12%;
+    --popover-foreground: 214 24% 95%;
+
+    --primary: 218 55% 72%;
+    --primary-foreground: 226 27% 10%;
+
+    --secondary: 223 17% 16%;
+    --secondary-foreground: 214 24% 95%;
+    --muted: 223 17% 16%;
+    --muted-foreground: 218 14% 72%;
+    --accent: 223 20% 20%;
+    --accent-foreground: 214 24% 95%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 153 62% 42%;
+    --warning: 39 94% 54%;
+
+    --border: 224 16% 24%;
+    --input: 224 16% 24%;
+    --ring: 218 55% 72%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family: var(--font-manrope);
+    background-image: none;
+    @apply bg-background text-foreground antialiased;
+  }
+
+  ::selection {
+    background: hsl(var(--primary) / 0.22);
+    color: hsl(var(--foreground));
+  }
+}
+
+@layer utilities {
+  .container-shell {
+    @apply mx-auto w-full max-w-[1320px] px-4 sm:px-6 lg:px-8;
+  }
+
+  .glass {
+    @apply border border-border/65 bg-white backdrop-blur-2xl dark:border-white/10 dark:bg-white/5;
+  }
+
+  .surface {
+    @apply border border-border/70 bg-card shadow-[0_20px_44px_-34px_hsl(var(--foreground)/0.16)] backdrop-blur-2xl dark:border-white/10;
+  }
+
+  .mesh-bg {
+    background-image: none;
+  }
+
+  .section-fade {
+    background-image: none;
+  }
+}

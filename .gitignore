@@ -1,0 +1,14 @@
+node_modules
+.next
+out
+.env
+.env.local
+.env*.local
+.DS_Store
+*.log
+coverage
+supabase/.temp
+tsconfig.tsbuildinfo
+
+# Separate project stored alongside Pilotd locally
+F1_Fantasy/
